@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.8.12"
+name = "dem_estimation"
+description = "Estimation of error probabilities in the decoding graph from experimental data" 
+version = "0.1.0"
+authors = [
+    { name = "Marc Serra Peralta", email = "marcserraperalta@gmail.com" }
+]
+maintainers = [
+    { name = "Marc Serra Peralta", email = "marcserraperalta@gmail.com" }
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = [
+    "numpy",
+]
+keywords = ["dem", "weight", "estimation", "decoder", "decoding graph"]
+
+[tool.setuptools.packages.find]
+include = ["dem_estimation"]  # package names should match these glob patterns (["*"] by default)
+namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
+
+[project.optional-dependencies]
+dev = ["pip-tools", "pytest", "scalene"]
+
