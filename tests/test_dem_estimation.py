@@ -9,9 +9,9 @@ def test_get_edge_probabilities():
         code_task="repetition_code:memory",
         rounds=3,
         distance=3,
-        after_clifford_depolarization=0.1,
-        before_measure_flip_probability=0.1,
-        after_reset_flip_probability=0.1,
+        after_clifford_depolarization=0.01,
+        before_measure_flip_probability=0.05,
+        after_reset_flip_probability=0.01,
     )
     sampler = circuit.compile_detector_sampler()
     defects = sampler.sample(shots=500_000)

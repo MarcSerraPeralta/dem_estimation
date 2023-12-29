@@ -1,12 +1,12 @@
 {
     "alloc_samples": 16,
     "args": [
-        "benchmark.py"
+        "run_time.py"
     ],
-    "elapsed_time_sec": 2.7361197471618652,
+    "elapsed_time_sec": 4.77308201789856,
     "filename": "/home/marc/usuari/phd/repositories/dem_estimation/benchmarks",
     "files": {
-        "/home/marc/usuari/phd/repositories/dem_estimation/benchmarks/benchmark.py": {
+        "/home/marc/usuari/phd/repositories/dem_estimation/benchmarks/run_time.py": {
             "functions": [
                 {
                     "line": "Scalene.get_edge_probabilities",
@@ -14,9 +14,9 @@
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.12312640265070249,
-                    "n_cpu_percent_c": 43.41462506822749,
-                    "n_cpu_percent_python": 1.0981856128722813,
+                    "n_core_utilization": 0.12462497261702658,
+                    "n_cpu_percent_c": 11.362858585522096,
+                    "n_cpu_percent_python": 26.63122049630005,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -25,7 +25,7 @@
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.677345250949023,
+                    "n_sys_percent": 0.11762324450134418,
                     "n_usage_fraction": 0.0
                 }
             ],
@@ -44,25 +44,25 @@
                     "lineno": 1,
                     "memory_samples": [
                         [
-                            198194383,
-                            10.0000581741333
+                            418062547,
+                            10.001303672790527
                         ]
                     ],
                     "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 1.7520485585805234,
-                    "n_core_utilization": 0.11809664844149814,
-                    "n_cpu_percent_c": 3.5784432381289077,
-                    "n_cpu_percent_python": 1.8432877096955516,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.12109506798256131,
+                    "n_cpu_percent_c": 5.581976349094426,
+                    "n_cpu_percent_python": 2.3042579946860586,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
-                    "n_growth_mb": 10.0000581741333,
-                    "n_malloc_mb": 10.0000581741333,
+                    "n_growth_mb": 10.001303672790527,
+                    "n_malloc_mb": 10.001303672790527,
                     "n_mallocs": 0,
-                    "n_peak_mb": 10.0000581741333,
-                    "n_python_fraction": 0.994543,
-                    "n_sys_percent": 0.31702102553233086,
-                    "n_usage_fraction": 0.07569241314975649,
+                    "n_peak_mb": 10.001303672790527,
+                    "n_python_fraction": 0.994647,
+                    "n_sys_percent": 0.25448097272648523,
+                    "n_usage_fraction": 0.06613295760699842,
                     "start_outermost_loop": 1,
                     "start_region_line": 1
                 },
@@ -74,9 +74,9 @@
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
+                    "n_core_utilization": 0.1030095035600287,
+                    "n_cpu_percent_c": 0.18463633601883642,
+                    "n_cpu_percent_python": 0.15078145199346818,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -85,7 +85,7 @@
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
+                    "n_sys_percent": 0.07160507932056259,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 2,
                     "start_region_line": 2
@@ -121,10 +121,10 @@
                     "lineno": 4,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.22384448112967786,
-                    "n_cpu_percent_c": 26.646529042907687,
-                    "n_cpu_percent_python": 2.0669201759352474,
+                    "n_copy_mb_s": 12.310379591520517,
+                    "n_core_utilization": 0.18058702375941985,
+                    "n_cpu_percent_c": 16.85747759200549,
+                    "n_cpu_percent_python": 1.644636206833538,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -133,7 +133,7 @@
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 2.2626144569840534,
+                    "n_sys_percent": 0.02358719303619705,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 4,
                     "start_region_line": 4
@@ -355,8 +355,8 @@
                     "start_region_line": 13
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "def get_edge_probabilities(\n",
                     "lineno": 14,
                     "memory_samples": [],
@@ -379,8 +379,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "    defects: np.ndarray,\n",
                     "lineno": 15,
                     "memory_samples": [],
@@ -403,8 +403,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "    edges: List = None,\n",
                     "lineno": 16,
                     "memory_samples": [],
@@ -427,8 +427,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "    boundary_edges: List = None,\n",
                     "lineno": 17,
                     "memory_samples": [],
@@ -451,8 +451,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "    neighbors: Dict = None,\n",
                     "lineno": 18,
                     "memory_samples": [],
@@ -475,8 +475,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "    avoid_nans: bool = True,\n",
                     "lineno": 19,
                     "memory_samples": [],
@@ -499,8 +499,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": ") -\\u003e Dict:\n",
                     "lineno": 20,
                     "memory_samples": [],
@@ -524,7 +524,7 @@
                 },
                 {
                     "end_outermost_loop": 21,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    \"\"\"\n",
                     "lineno": 21,
                     "memory_samples": [],
@@ -548,7 +548,7 @@
                 },
                 {
                     "end_outermost_loop": 22,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    Infers the probability of each edges between the given pairs of defects\n",
                     "lineno": 22,
                     "memory_samples": [],
@@ -572,7 +572,7 @@
                 },
                 {
                     "end_outermost_loop": 23,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    (including the boundary node) based on the observed defects provided.\n",
                     "lineno": 23,
                     "memory_samples": [],
@@ -596,7 +596,7 @@
                 },
                 {
                     "end_outermost_loop": 24,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "\n",
                     "lineno": 24,
                     "memory_samples": [],
@@ -620,7 +620,7 @@
                 },
                 {
                     "end_outermost_loop": 25,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    For the theory behind this formulat see Eqns. 11 and 16 from the article\n",
                     "lineno": 25,
                     "memory_samples": [],
@@ -644,7 +644,7 @@
                 },
                 {
                     "end_outermost_loop": 26,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    \"Exponential suppression of bit or phase errors with cyclic error correction\" by Google Quantum AI,\n",
                     "lineno": 26,
                     "memory_samples": [],
@@ -668,7 +668,7 @@
                 },
                 {
                     "end_outermost_loop": 27,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    found in the Supplementary information, accessible from https://doi.org/10.1038/s41586-021-03588-y.\n",
                     "lineno": 27,
                     "memory_samples": [],
@@ -692,7 +692,7 @@
                 },
                 {
                     "end_outermost_loop": 28,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "\n",
                     "lineno": 28,
                     "memory_samples": [],
@@ -716,7 +716,7 @@
                 },
                 {
                     "end_outermost_loop": 29,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    Parameters\n",
                     "lineno": 29,
                     "memory_samples": [],
@@ -740,7 +740,7 @@
                 },
                 {
                     "end_outermost_loop": 30,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    ----------\n",
                     "lineno": 30,
                     "memory_samples": [],
@@ -764,7 +764,7 @@
                 },
                 {
                     "end_outermost_loop": 31,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    defects\n",
                     "lineno": 31,
                     "memory_samples": [],
@@ -788,7 +788,7 @@
                 },
                 {
                     "end_outermost_loop": 32,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        Defect observations with shape (n_shots, n_defects)\n",
                     "lineno": 32,
                     "memory_samples": [],
@@ -812,7 +812,7 @@
                 },
                 {
                     "end_outermost_loop": 33,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    edges\n",
                     "lineno": 33,
                     "memory_samples": [],
@@ -836,7 +836,7 @@
                 },
                 {
                     "end_outermost_loop": 34,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        List containing the edges to calculate, corresponding to pairs of defects.\n",
                     "lineno": 34,
                     "memory_samples": [],
@@ -860,7 +860,7 @@
                 },
                 {
                     "end_outermost_loop": 35,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        If not specified, calculates all possible edges.\n",
                     "lineno": 35,
                     "memory_samples": [],
@@ -884,7 +884,7 @@
                 },
                 {
                     "end_outermost_loop": 36,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    boundary_edges\n",
                     "lineno": 36,
                     "memory_samples": [],
@@ -908,7 +908,7 @@
                 },
                 {
                     "end_outermost_loop": 37,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        List containing the edges to calculate, corresponding to defects.\n",
                     "lineno": 37,
                     "memory_samples": [],
@@ -932,7 +932,7 @@
                 },
                 {
                     "end_outermost_loop": 38,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        If not specified, calculates all possible boundary edges.\n",
                     "lineno": 38,
                     "memory_samples": [],
@@ -956,7 +956,7 @@
                 },
                 {
                     "end_outermost_loop": 39,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    avoid_nans\n",
                     "lineno": 39,
                     "memory_samples": [],
@@ -980,7 +980,7 @@
                 },
                 {
                     "end_outermost_loop": 40,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        If True, ensures that the values inside square roots are positive.\n",
                     "lineno": 40,
                     "memory_samples": [],
@@ -1004,7 +1004,7 @@
                 },
                 {
                     "end_outermost_loop": 41,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "\n",
                     "lineno": 41,
                     "memory_samples": [],
@@ -1028,7 +1028,7 @@
                 },
                 {
                     "end_outermost_loop": 42,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    Returns\n",
                     "lineno": 42,
                     "memory_samples": [],
@@ -1052,7 +1052,7 @@
                 },
                 {
                     "end_outermost_loop": 43,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    -------\n",
                     "lineno": 43,
                     "memory_samples": [],
@@ -1076,7 +1076,7 @@
                 },
                 {
                     "end_outermost_loop": 44,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    edge_probs\n",
                     "lineno": 44,
                     "memory_samples": [],
@@ -1100,7 +1100,7 @@
                 },
                 {
                     "end_outermost_loop": 45,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        Dictionary containing the edges and their estimated probabilities.\n",
                     "lineno": 45,
                     "memory_samples": [],
@@ -1124,7 +1124,7 @@
                 },
                 {
                     "end_outermost_loop": 46,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    \"\"\"\n",
                     "lineno": 46,
                     "memory_samples": [],
@@ -1147,8 +1147,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "    # checks\n",
                     "lineno": 47,
                     "memory_samples": [],
@@ -1172,7 +1172,7 @@
                 },
                 {
                     "end_outermost_loop": 49,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    if (not isinstance(edges, list)) and (edges is not None):\n",
                     "lineno": 48,
                     "memory_samples": [],
@@ -1196,7 +1196,7 @@
                 },
                 {
                     "end_outermost_loop": 49,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        raise ValueError(f\"'edges' must be a list or None, but {type(edges)} was given\")\n",
                     "lineno": 49,
                     "memory_samples": [],
@@ -1220,7 +1220,7 @@
                 },
                 {
                     "end_outermost_loop": 53,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    if (not isinstance(boundary_edges, list)) and (boundary_edges is not None):\n",
                     "lineno": 50,
                     "memory_samples": [],
@@ -1244,7 +1244,7 @@
                 },
                 {
                     "end_outermost_loop": 51,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        raise ValueError(\n",
                     "lineno": 51,
                     "memory_samples": [],
@@ -1268,7 +1268,7 @@
                 },
                 {
                     "end_outermost_loop": 52,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "            f\"'boundary_edges' must be a list or None, but {type(boundary_edges)} was given\"\n",
                     "lineno": 52,
                     "memory_samples": [],
@@ -1292,7 +1292,7 @@
                 },
                 {
                     "end_outermost_loop": 53,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        )\n",
                     "lineno": 53,
                     "memory_samples": [],
@@ -1316,7 +1316,7 @@
                 },
                 {
                     "end_outermost_loop": 54,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "\n",
                     "lineno": 54,
                     "memory_samples": [],
@@ -1339,8 +1339,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "    # setup inputs and ouputs\n",
                     "lineno": 55,
                     "memory_samples": [],
@@ -1364,7 +1364,7 @@
                 },
                 {
                     "end_outermost_loop": 56,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    n_shots, n_defects = defects.shape\n",
                     "lineno": 56,
                     "memory_samples": [],
@@ -1388,7 +1388,7 @@
                 },
                 {
                     "end_outermost_loop": 57,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    edge_probs = {}\n",
                     "lineno": 57,
                     "memory_samples": [],
@@ -1412,7 +1412,7 @@
                 },
                 {
                     "end_outermost_loop": 58,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "\n",
                     "lineno": 58,
                     "memory_samples": [],
@@ -1436,7 +1436,7 @@
                 },
                 {
                     "end_outermost_loop": 64,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    if edges is None:\n",
                     "lineno": 59,
                     "memory_samples": [],
@@ -1460,7 +1460,7 @@
                 },
                 {
                     "end_outermost_loop": 60,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        edges = list(combinations(range(n_defects), 2))\n",
                     "lineno": 60,
                     "memory_samples": [],
@@ -1484,7 +1484,7 @@
                 },
                 {
                     "end_outermost_loop": 64,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        # avoid expensive calculation\n",
                     "lineno": 61,
                     "memory_samples": [],
@@ -1508,7 +1508,7 @@
                 },
                 {
                     "end_outermost_loop": 64,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        if neighbors is None:\n",
                     "lineno": 62,
                     "memory_samples": [],
@@ -1532,7 +1532,7 @@
                 },
                 {
                     "end_outermost_loop": 63,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "            all_d = np.arange(n_defects)\n",
                     "lineno": 63,
                     "memory_samples": [],
@@ -1556,7 +1556,7 @@
                 },
                 {
                     "end_outermost_loop": 64,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "            neighbors = {d: all_d[all_d != d] for d in range(n_defects)}\n",
                     "lineno": 64,
                     "memory_samples": [],
@@ -1580,7 +1580,7 @@
                 },
                 {
                     "end_outermost_loop": 65,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "\n",
                     "lineno": 65,
                     "memory_samples": [],
@@ -1604,7 +1604,7 @@
                 },
                 {
                     "end_outermost_loop": 67,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "    if boundary_edges is None:\n",
                     "lineno": 66,
                     "memory_samples": [],
@@ -1628,7 +1628,7 @@
                 },
                 {
                     "end_outermost_loop": 67,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        boundary_edges = np.arange(n_defects)\n",
                     "lineno": 67,
                     "memory_samples": [],
@@ -1652,7 +1652,7 @@
                 },
                 {
                     "end_outermost_loop": 68,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "\n",
                     "lineno": 68,
                     "memory_samples": [],
@@ -1675,8 +1675,8 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 74,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 73,
+                    "end_region_line": 97,
                     "line": "    if neighbors is None:\n",
                     "lineno": 69,
                     "memory_samples": [],
@@ -1700,7 +1700,7 @@
                 },
                 {
                     "end_outermost_loop": 70,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "        neighbors = {d: [] for d in range(n_defects)}\n",
                     "lineno": 70,
                     "memory_samples": [],
@@ -1796,8 +1796,8 @@
                 },
                 {
                     "end_outermost_loop": 74,
-                    "end_region_line": 100,
-                    "line": "        neighbors = {d: np.array(n) for d, n in neighbors.items()}\n",
+                    "end_region_line": 97,
+                    "line": "    neighbors = {d: np.array(n) for d, n in neighbors.items()}\n",
                     "lineno": 74,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -1820,7 +1820,7 @@
                 },
                 {
                     "end_outermost_loop": 75,
-                    "end_region_line": 100,
+                    "end_region_line": 97,
                     "line": "\n",
                     "lineno": 75,
                     "memory_samples": [],
@@ -1843,9 +1843,9 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
-                    "line": "    # obtain \\u003cdidj\\u003e and \\u003cdi\\u003e\n",
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
+                    "line": "    # get edges using Eq. 11 from the reference above\n",
                     "lineno": 76,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -1868,15 +1868,15 @@
                 },
                 {
                     "end_outermost_loop": 77,
-                    "end_region_line": 100,
-                    "line": "    didj = np.einsum(\"ni, nj -\\u003e ij\", defects, defects, dtype=np.int32) / n_shots\n",
+                    "end_region_line": 97,
+                    "line": "    di = np.average(defects, axis=0)\n",
                     "lineno": 77,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.12219462421872912,
-                    "n_cpu_percent_c": 41.482639554158645,
-                    "n_cpu_percent_python": 0.5449374601970374,
+                    "n_core_utilization": 0.11948657596609902,
+                    "n_cpu_percent_c": 1.9154083695265942,
+                    "n_cpu_percent_python": 0.3497946932038892,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -1885,22 +1885,22 @@
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.9648799810581095,
+                    "n_sys_percent": 0.10455800022094305,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 77,
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 78,
-                    "end_region_line": 100,
-                    "line": "    di = np.average(defects, axis=0)\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "    for e1, e2 in edges:\n",
                     "lineno": 78,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.12405818108267586,
-                    "n_cpu_percent_c": 1.6278921084949054,
-                    "n_cpu_percent_python": 0.5532481526752441,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -1909,15 +1909,15 @@
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.01655867546484797,
+                    "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 78,
-                    "start_region_line": 14
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 79,
-                    "end_region_line": 100,
-                    "line": "    di_matrix = np.repeat(di[np.newaxis, :], len(di), axis=0)\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "        xi, xj = defects[:, e1], defects[:, e2]\n",
                     "lineno": 79,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -1935,20 +1935,20 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 79,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 80,
-                    "end_region_line": 100,
-                    "line": "\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "        xixj = np.einsum(\"i,i -\\u003e \", xi, xj, dtype=np.int32) / n_shots\n",
                     "lineno": 80,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
+                    "n_core_utilization": 0.12468546663485101,
+                    "n_cpu_percent_c": 7.4790876935433515,
+                    "n_cpu_percent_python": 25.366676216057844,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -1957,22 +1957,22 @@
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
+                    "n_sys_percent": 0.08571552273980099,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 80,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
-                    "line": "    # get edges using Eq. 11 from the reference above\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "        numerator = 4 * (xixj - di[e1] * di[e2])\n",
                     "lineno": 81,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
+                    "n_core_utilization": 0.12502367629162606,
+                    "n_cpu_percent_c": 0.0036611994449929114,
+                    "n_cpu_percent_python": 0.18297031679412037,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -1983,20 +1983,20 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 14,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 82,
-                    "end_region_line": 100,
-                    "line": "    numerator = 4 * (didj - di_matrix * di_matrix.T)\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "        denominator = 1 - 2 * di[e1] - 2 * di[e2] + 4 * xixj\n",
                     "lineno": 82,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
+                    "n_core_utilization": 0.12499419508922212,
+                    "n_cpu_percent_c": 0.0049711275320621804,
+                    "n_cpu_percent_python": 0.18296181978320844,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -2005,15 +2005,15 @@
                     "n_mallocs": 0,
                     "n_peak_mb": 0.0,
                     "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
+                    "n_sys_percent": 8.727877247505689e-06,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 82,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 83,
-                    "end_region_line": 100,
-                    "line": "    denominator = 1 - 2 * di_matrix - 2 * di_matrix.T + 4 * didj\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "        tmp = 1 - numerator / denominator\n",
                     "lineno": 83,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2031,13 +2031,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 83,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 84,
-                    "end_region_line": 100,
-                    "line": "    tmp = 1 - numerator / denominator\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "\n",
                     "lineno": 84,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2055,13 +2055,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 84,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 85,
-                    "end_region_line": 100,
-                    "line": "\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "        if avoid_nans:\n",
                     "lineno": 85,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2079,13 +2079,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 85,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 87,
-                    "end_region_line": 100,
-                    "line": "    if avoid_nans:\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "            tmp = 0 if tmp \\u003c 0 else tmp\n",
                     "lineno": 86,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2103,13 +2103,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 86,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
-                    "end_outermost_loop": 87,
-                    "end_region_line": 100,
-                    "line": "        tmp[tmp \\u003c 0] = 0\n",
+                    "end_outermost_loop": 88,
+                    "end_region_line": 88,
+                    "line": "\n",
                     "lineno": 87,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2127,20 +2127,20 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 87,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
                     "end_outermost_loop": 88,
-                    "end_region_line": 100,
-                    "line": "\n",
+                    "end_region_line": 88,
+                    "line": "        edge_probs[tuple(sorted((e1, e2)))] = 0.5 - 0.5 * np.sqrt(tmp)\n",
                     "lineno": 88,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
+                    "n_core_utilization": 0.1250283025246912,
+                    "n_cpu_percent_c": 0.0037859120129191447,
+                    "n_cpu_percent_python": 0.18297031679412037,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
@@ -2151,13 +2151,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 88,
-                    "start_region_line": 14
+                    "start_outermost_loop": 78,
+                    "start_region_line": 78
                 },
                 {
                     "end_outermost_loop": 89,
-                    "end_region_line": 100,
-                    "line": "    pij = 0.5 - 0.5 * np.sqrt(tmp)\n",
+                    "end_region_line": 97,
+                    "line": "\n",
                     "lineno": 89,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2179,106 +2179,10 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 90,
-                    "end_region_line": 100,
-                    "line": "\n",
-                    "lineno": 90,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
-                    "n_gpu_avg_memory_mb": 0.0,
-                    "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 90,
-                    "start_region_line": 14
-                },
-                {
-                    "end_outermost_loop": 92,
-                    "end_region_line": 92,
-                    "line": "    for edge in edges:\n",
-                    "lineno": 91,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
-                    "n_gpu_avg_memory_mb": 0.0,
-                    "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 91,
-                    "start_region_line": 91
-                },
-                {
-                    "end_outermost_loop": 92,
-                    "end_region_line": 92,
-                    "line": "        edge_probs[tuple(edge)] = pij[edge[0], edge[1]]\n",
-                    "lineno": 92,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
-                    "n_gpu_avg_memory_mb": 0.0,
-                    "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 91,
-                    "start_region_line": 91
-                },
-                {
-                    "end_outermost_loop": 93,
-                    "end_region_line": 100,
-                    "line": "\n",
-                    "lineno": 93,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
-                    "n_gpu_avg_memory_mb": 0.0,
-                    "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 93,
-                    "start_region_line": 14
-                },
-                {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
                     "line": "    # get boundary edges using Eq. 16 from the reference above\n",
-                    "lineno": 94,
+                    "lineno": 90,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
@@ -2299,9 +2203,105 @@
                     "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 98,
-                    "end_region_line": 98,
+                    "end_outermost_loop": 91,
+                    "end_region_line": 97,
+                    "line": "    di = np.average(defects, axis=0)\n",
+                    "lineno": 91,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.12497340700192808,
+                    "n_cpu_percent_c": 1.8827106109522047,
+                    "n_cpu_percent_python": 0.3658471336668664,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0005746661733287142,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 91,
+                    "start_region_line": 14
+                },
+                {
+                    "end_outermost_loop": 95,
+                    "end_region_line": 95,
                     "line": "    for d in boundary_edges:\n",
+                    "lineno": 92,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 92,
+                    "start_region_line": 92
+                },
+                {
+                    "end_outermost_loop": 95,
+                    "end_region_line": 95,
+                    "line": "        probs = [edge_probs[tuple(sorted((e1, d)))] for e1 in neighbors[d]]\n",
+                    "lineno": 93,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 92,
+                    "start_region_line": 92
+                },
+                {
+                    "end_outermost_loop": 95,
+                    "end_region_line": 95,
+                    "line": "        p_sigma = add_probs(probs)\n",
+                    "lineno": 94,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 92,
+                    "start_region_line": 92
+                },
+                {
+                    "end_outermost_loop": 95,
+                    "end_region_line": 95,
+                    "line": "        edge_probs[(d,)] = (di[d] - p_sigma) / (1 - 2 * p_sigma)\n",
                     "lineno": 95,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2319,13 +2319,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 95,
-                    "start_region_line": 95
+                    "start_outermost_loop": 92,
+                    "start_region_line": 92
                 },
                 {
-                    "end_outermost_loop": 98,
-                    "end_region_line": 98,
-                    "line": "        probs = pij[neighbors[d], d]\n",
+                    "end_outermost_loop": 96,
+                    "end_region_line": 97,
+                    "line": "\n",
                     "lineno": 96,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2343,13 +2343,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 95,
-                    "start_region_line": 95
+                    "start_outermost_loop": 96,
+                    "start_region_line": 14
                 },
                 {
-                    "end_outermost_loop": 98,
-                    "end_region_line": 98,
-                    "line": "        p_sigma = add_probs(probs)\n",
+                    "end_outermost_loop": 97,
+                    "end_region_line": 97,
+                    "line": "    return edge_probs\n",
                     "lineno": 97,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2367,13 +2367,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 95,
-                    "start_region_line": 95
+                    "start_outermost_loop": 97,
+                    "start_region_line": 14
                 },
                 {
                     "end_outermost_loop": 98,
                     "end_region_line": 98,
-                    "line": "        edge_probs[(d,)] = (di[d] - p_sigma) / (1 - 2 * p_sigma)\n",
+                    "line": "\n",
                     "lineno": 98,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2391,12 +2391,12 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 95,
-                    "start_region_line": 95
+                    "start_outermost_loop": 98,
+                    "start_region_line": 98
                 },
                 {
                     "end_outermost_loop": 99,
-                    "end_region_line": 100,
+                    "end_region_line": 99,
                     "line": "\n",
                     "lineno": 99,
                     "memory_samples": [],
@@ -2416,12 +2416,12 @@
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 99,
-                    "start_region_line": 14
+                    "start_region_line": 99
                 },
                 {
-                    "end_outermost_loop": 100,
-                    "end_region_line": 100,
-                    "line": "    return edge_probs\n",
+                    "end_outermost_loop": 104,
+                    "end_region_line": 104,
+                    "line": "def add_probs(probs: list) -\\u003e float:\n",
                     "lineno": 100,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2440,12 +2440,12 @@
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 100,
-                    "start_region_line": 14
+                    "start_region_line": 100
                 },
                 {
                     "end_outermost_loop": 101,
-                    "end_region_line": 101,
-                    "line": "\n",
+                    "end_region_line": 104,
+                    "line": "    prob = probs[0]\n",
                     "lineno": 101,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2464,12 +2464,12 @@
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 101,
-                    "start_region_line": 101
+                    "start_region_line": 100
                 },
                 {
-                    "end_outermost_loop": 102,
-                    "end_region_line": 102,
-                    "line": "\n",
+                    "end_outermost_loop": 103,
+                    "end_region_line": 103,
+                    "line": "    for p in probs[1:]:\n",
                     "lineno": 102,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2491,9 +2491,9 @@
                     "start_region_line": 102
                 },
                 {
-                    "end_outermost_loop": 107,
-                    "end_region_line": 107,
-                    "line": "def add_probs(probs: list) -\\u003e float:\n",
+                    "end_outermost_loop": 103,
+                    "end_region_line": 103,
+                    "line": "        prob = g(prob, p)\n",
                     "lineno": 103,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2511,13 +2511,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 103,
-                    "start_region_line": 103
+                    "start_outermost_loop": 102,
+                    "start_region_line": 102
                 },
                 {
                     "end_outermost_loop": 104,
-                    "end_region_line": 107,
-                    "line": "    prob = probs[0]\n",
+                    "end_region_line": 104,
+                    "line": "    return prob\n",
                     "lineno": 104,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2536,12 +2536,12 @@
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 104,
-                    "start_region_line": 103
+                    "start_region_line": 100
                 },
                 {
-                    "end_outermost_loop": 106,
-                    "end_region_line": 106,
-                    "line": "    for p in probs[1:]:\n",
+                    "end_outermost_loop": 105,
+                    "end_region_line": 105,
+                    "line": "\n",
                     "lineno": 105,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2565,7 +2565,7 @@
                 {
                     "end_outermost_loop": 106,
                     "end_region_line": 106,
-                    "line": "        prob = g(prob, p)\n",
+                    "line": "\n",
                     "lineno": 106,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2583,13 +2583,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 105,
-                    "start_region_line": 105
+                    "start_outermost_loop": 106,
+                    "start_region_line": 106
                 },
                 {
-                    "end_outermost_loop": 107,
-                    "end_region_line": 107,
-                    "line": "    return prob\n",
+                    "end_outermost_loop": 108,
+                    "end_region_line": 108,
+                    "line": "def g(p: np.ndarray, q: np.ndarray) -\\u003e np.ndarray:\n",
                     "lineno": 107,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2608,12 +2608,12 @@
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 107,
-                    "start_region_line": 103
+                    "start_region_line": 107
                 },
                 {
                     "end_outermost_loop": 108,
                     "end_region_line": 108,
-                    "line": "\n",
+                    "line": "    return p * (1 - q) + (1 - p) * q\n",
                     "lineno": 108,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2632,7 +2632,7 @@
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 108,
-                    "start_region_line": 108
+                    "start_region_line": 107
                 },
                 {
                     "end_outermost_loop": 109,
@@ -2659,9 +2659,9 @@
                     "start_region_line": 109
                 },
                 {
-                    "end_outermost_loop": 111,
-                    "end_region_line": 111,
-                    "line": "def g(p: np.ndarray, q: np.ndarray) -\\u003e np.ndarray:\n",
+                    "end_outermost_loop": 110,
+                    "end_region_line": 110,
+                    "line": "\n",
                     "lineno": 110,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2685,7 +2685,7 @@
                 {
                     "end_outermost_loop": 111,
                     "end_region_line": 111,
-                    "line": "    return p * (1 - q) + (1 - p) * q\n",
+                    "line": "#######################\n",
                     "lineno": 111,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2704,7 +2704,7 @@
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 111,
-                    "start_region_line": 110
+                    "start_region_line": 111
                 },
                 {
                     "end_outermost_loop": 112,
@@ -2757,7 +2757,7 @@
                 {
                     "end_outermost_loop": 114,
                     "end_region_line": 114,
-                    "line": "#######################\n",
+                    "line": "circuit = stim.Circuit.generated(\n",
                     "lineno": 114,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2781,7 +2781,7 @@
                 {
                     "end_outermost_loop": 115,
                     "end_region_line": 115,
-                    "line": "\n",
+                    "line": "    code_task=\"repetition_code:memory\",\n",
                     "lineno": 115,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2805,7 +2805,7 @@
                 {
                     "end_outermost_loop": 116,
                     "end_region_line": 116,
-                    "line": "\n",
+                    "line": "    rounds=20,\n",
                     "lineno": 116,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2829,7 +2829,7 @@
                 {
                     "end_outermost_loop": 117,
                     "end_region_line": 117,
-                    "line": "circuit = stim.Circuit.generated(\n",
+                    "line": "    distance=5,\n",
                     "lineno": 117,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2853,7 +2853,7 @@
                 {
                     "end_outermost_loop": 118,
                     "end_region_line": 118,
-                    "line": "    code_task=\"repetition_code:memory\",\n",
+                    "line": "    after_clifford_depolarization=0.1,\n",
                     "lineno": 118,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2877,7 +2877,7 @@
                 {
                     "end_outermost_loop": 119,
                     "end_region_line": 119,
-                    "line": "    rounds=10,\n",
+                    "line": "    before_measure_flip_probability=0.1,\n",
                     "lineno": 119,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2901,7 +2901,7 @@
                 {
                     "end_outermost_loop": 120,
                     "end_region_line": 120,
-                    "line": "    distance=5,\n",
+                    "line": "    after_reset_flip_probability=0.1,\n",
                     "lineno": 120,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2925,7 +2925,7 @@
                 {
                     "end_outermost_loop": 121,
                     "end_region_line": 121,
-                    "line": "    after_clifford_depolarization=0.1,\n",
+                    "line": ")\n",
                     "lineno": 121,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2949,7 +2949,7 @@
                 {
                     "end_outermost_loop": 122,
                     "end_region_line": 122,
-                    "line": "    before_measure_flip_probability=0.1,\n",
+                    "line": "sampler = circuit.compile_detector_sampler()\n",
                     "lineno": 122,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2973,31 +2973,48 @@
                 {
                     "end_outermost_loop": 123,
                     "end_region_line": 123,
-                    "line": "    after_reset_flip_probability=0.1,\n",
+                    "line": "defects = sampler.sample(shots=500_000)\n",
                     "lineno": 123,
-                    "memory_samples": [],
+                    "memory_samples": [
+                        [
+                            2479323905,
+                            26.824337005615234
+                        ],
+                        [
+                            2479331499,
+                            42.32828903198242
+                        ],
+                        [
+                            2479359534,
+                            57.653438568115234
+                        ],
+                        [
+                            2479365709,
+                            105.34088516235352
+                        ]
+                    ],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
+                    "n_core_utilization": 0.12191192885634392,
+                    "n_cpu_percent_c": 29.957213875337132,
+                    "n_cpu_percent_python": 0.1784501139506201,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
+                    "n_growth_mb": 95.15109539031982,
+                    "n_malloc_mb": 95.15109539031982,
                     "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
+                    "n_peak_mb": 95.15109539031982,
+                    "n_python_fraction": 0.1549369172149663,
+                    "n_sys_percent": 0.7633467473875728,
+                    "n_usage_fraction": 0.6291803112455377,
                     "start_outermost_loop": 123,
                     "start_region_line": 123
                 },
                 {
                     "end_outermost_loop": 124,
                     "end_region_line": 124,
-                    "line": ")\n",
+                    "line": "\n",
                     "lineno": 124,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3021,7 +3038,7 @@
                 {
                     "end_outermost_loop": 125,
                     "end_region_line": 125,
-                    "line": "sampler = circuit.compile_detector_sampler()\n",
+                    "line": "dem = circuit.detector_error_model()\n",
                     "lineno": 125,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3045,41 +3062,24 @@
                 {
                     "end_outermost_loop": 126,
                     "end_region_line": 126,
-                    "line": "defects = sampler.sample(shots=500_000)\n",
+                    "line": "edges, boundary_edges, _ = stim_to_edges(dem)\n",
                     "lineno": 126,
-                    "memory_samples": [
-                        [
-                            988255841,
-                            26.778767585754395
-                        ],
-                        [
-                            988260454,
-                            42.28271961212158
-                        ],
-                        [
-                            988263938,
-                            57.607869148254395
-                        ],
-                        [
-                            988267182,
-                            86.22500324249268
-                        ]
-                    ],
+                    "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.11887644865716634,
-                    "n_cpu_percent_c": 13.555024026817916,
-                    "n_cpu_percent_python": 0.2650698851224532,
+                    "n_core_utilization": 0.12523321062586212,
+                    "n_cpu_percent_c": 0.003802580608768792,
+                    "n_cpu_percent_python": 0.18297031679412037,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
-                    "n_growth_mb": 76.03645896911621,
-                    "n_malloc_mb": 76.03645896911621,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
                     "n_mallocs": 0,
-                    "n_peak_mb": 76.03645896911621,
-                    "n_python_fraction": 0.1947303780950424,
-                    "n_sys_percent": 0.7118992499230247,
-                    "n_usage_fraction": 0.5755349585487454,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
                     "start_outermost_loop": 126,
                     "start_region_line": 126
                 },
@@ -3110,7 +3110,7 @@
                 {
                     "end_outermost_loop": 128,
                     "end_region_line": 128,
-                    "line": "dem = circuit.detector_error_model()\n",
+                    "line": "edge_probs = get_edge_probabilities(defects, edges=edges, boundary_edges=boundary_edges)\n",
                     "lineno": 128,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3134,7 +3134,7 @@
                 {
                     "end_outermost_loop": 129,
                     "end_region_line": 129,
-                    "line": "edges, boundary_edges, _ = stim_to_edges(dem)\n",
+                    "line": "\n",
                     "lineno": 129,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3158,7 +3158,7 @@
                 {
                     "end_outermost_loop": 130,
                     "end_region_line": 130,
-                    "line": "\n",
+                    "line": "circuit = stim.Circuit.generated(\n",
                     "lineno": 130,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3182,7 +3182,7 @@
                 {
                     "end_outermost_loop": 131,
                     "end_region_line": 131,
-                    "line": "edge_probs = get_edge_probabilities(defects, edges=edges, boundary_edges=boundary_edges)\n",
+                    "line": "    code_task=\"repetition_code:memory\",\n",
                     "lineno": 131,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3206,7 +3206,7 @@
                 {
                     "end_outermost_loop": 132,
                     "end_region_line": 132,
-                    "line": "\n",
+                    "line": "    rounds=3,\n",
                     "lineno": 132,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3230,7 +3230,7 @@
                 {
                     "end_outermost_loop": 133,
                     "end_region_line": 133,
-                    "line": "circuit = stim.Circuit.generated(\n",
+                    "line": "    distance=3,\n",
                     "lineno": 133,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3254,7 +3254,7 @@
                 {
                     "end_outermost_loop": 134,
                     "end_region_line": 134,
-                    "line": "    code_task=\"repetition_code:memory\",\n",
+                    "line": "    after_clifford_depolarization=0.1,\n",
                     "lineno": 134,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3278,7 +3278,7 @@
                 {
                     "end_outermost_loop": 135,
                     "end_region_line": 135,
-                    "line": "    rounds=3,\n",
+                    "line": "    before_measure_flip_probability=0.1,\n",
                     "lineno": 135,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3302,7 +3302,7 @@
                 {
                     "end_outermost_loop": 136,
                     "end_region_line": 136,
-                    "line": "    distance=3,\n",
+                    "line": "    after_reset_flip_probability=0.1,\n",
                     "lineno": 136,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3326,7 +3326,7 @@
                 {
                     "end_outermost_loop": 137,
                     "end_region_line": 137,
-                    "line": "    after_clifford_depolarization=0.1,\n",
+                    "line": ")\n",
                     "lineno": 137,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3350,9 +3350,22 @@
                 {
                     "end_outermost_loop": 138,
                     "end_region_line": 138,
-                    "line": "    before_measure_flip_probability=0.1,\n",
+                    "line": "sampler = circuit.compile_detector_sampler()\n",
                     "lineno": 138,
-                    "memory_samples": [],
+                    "memory_samples": [
+                        [
+                            4659927341,
+                            90.04231929779053
+                        ],
+                        [
+                            4659930882,
+                            74.71710109710693
+                        ],
+                        [
+                            4659933402,
+                            59.39188289642334
+                        ]
+                    ],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
                     "n_core_utilization": 0.0,
@@ -3374,31 +3387,48 @@
                 {
                     "end_outermost_loop": 139,
                     "end_region_line": 139,
-                    "line": "    after_reset_flip_probability=0.1,\n",
+                    "line": "defects = sampler.sample(shots=500_000)\n",
                     "lineno": 139,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
+                    "memory_samples": [
+                        [
+                            4659941515,
+                            74.64835262298584
+                        ],
+                        [
+                            4659946484,
+                            90.20804500579834
+                        ],
+                        [
+                            4659950545,
+                            105.46973323822021
+                        ],
+                        [
+                            4665095501,
+                            61.50576972961426
+                        ]
+                    ],
+                    "n_avg_mb": 46.077850341796875,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
+                    "n_core_utilization": 0.10823240808402128,
+                    "n_cpu_percent_c": 3.0704274755932213,
+                    "n_cpu_percent_python": 0.1584265439561911,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
+                    "n_growth_mb": 46.077850341796875,
+                    "n_malloc_mb": 46.077850341796875,
+                    "n_mallocs": 1,
+                    "n_peak_mb": 46.077850341796875,
+                    "n_python_fraction": 0.11928778339191419,
+                    "n_sys_percent": 0.5002208443338241,
+                    "n_usage_fraction": 0.30468673114746386,
                     "start_outermost_loop": 139,
                     "start_region_line": 139
                 },
                 {
                     "end_outermost_loop": 140,
                     "end_region_line": 140,
-                    "line": ")\n",
+                    "line": "\n",
                     "lineno": 140,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3422,22 +3452,9 @@
                 {
                     "end_outermost_loop": 141,
                     "end_region_line": 141,
-                    "line": "sampler = circuit.compile_detector_sampler()\n",
+                    "line": "dem = circuit.detector_error_model()\n",
                     "lineno": 141,
-                    "memory_samples": [
-                        [
-                            2621271074,
-                            70.87391376495361
-                        ],
-                        [
-                            2621274226,
-                            55.54869556427002
-                        ],
-                        [
-                            2621276442,
-                            40.223477363586426
-                        ]
-                    ],
+                    "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
                     "n_core_utilization": 0.0,
@@ -3459,41 +3476,24 @@
                 {
                     "end_outermost_loop": 142,
                     "end_region_line": 142,
-                    "line": "defects = sampler.sample(shots=500_000)\n",
+                    "line": "edges, boundary_edges, _ = stim_to_edges(dem)\n",
                     "lineno": 142,
-                    "memory_samples": [
-                        [
-                            2621283722,
-                            55.47998523712158
-                        ],
-                        [
-                            2621287765,
-                            71.03967761993408
-                        ],
-                        [
-                            2621291136,
-                            86.30136585235596
-                        ],
-                        [
-                            2623435673,
-                            61.40934753417969
-                        ]
-                    ],
-                    "n_avg_mb": 46.07788848876953,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.11338860170605854,
-                    "n_cpu_percent_c": 2.979227563027984,
-                    "n_cpu_percent_python": 0.2528331218498985,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
-                    "n_growth_mb": 46.07788848876953,
-                    "n_malloc_mb": 46.07788848876953,
-                    "n_mallocs": 1,
-                    "n_peak_mb": 46.07788848876953,
-                    "n_python_fraction": 0.1443964850371412,
-                    "n_sys_percent": 0.33097457202615016,
-                    "n_usage_fraction": 0.34877262830149813,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
                     "start_outermost_loop": 142,
                     "start_region_line": 142
                 },
@@ -3524,7 +3524,7 @@
                 {
                     "end_outermost_loop": 144,
                     "end_region_line": 144,
-                    "line": "dem = circuit.detector_error_model()\n",
+                    "line": "edge_probs = get_edge_probabilities(defects, edges=edges, boundary_edges=boundary_edges)\n",
                     "lineno": 144,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3548,7 +3548,7 @@
                 {
                     "end_outermost_loop": 145,
                     "end_region_line": 145,
-                    "line": "edges, boundary_edges, _ = stim_to_edges(dem)\n",
+                    "line": "\n",
                     "lineno": 145,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3570,9 +3570,9 @@
                     "start_region_line": 145
                 },
                 {
-                    "end_outermost_loop": 146,
-                    "end_region_line": 146,
-                    "line": "\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "for instr in dem.flattened():\n",
                     "lineno": 146,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3594,9 +3594,9 @@
                     "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 147,
-                    "end_region_line": 147,
-                    "line": "edge_probs = get_edge_probabilities(defects, edges=edges, boundary_edges=boundary_edges)\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "    if instr.type != \"error\":\n",
                     "lineno": 147,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3614,13 +3614,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 147,
-                    "start_region_line": 147
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 148,
-                    "end_region_line": 148,
-                    "line": "\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "        continue\n",
                     "lineno": 148,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3638,13 +3638,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 148,
-                    "start_region_line": 148
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "for instr in dem.flattened():\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "    defects = tuple(\n",
                     "lineno": 149,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3662,13 +3662,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "    if instr.type != \"error\":\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "        [d.val for d in instr.targets_copy() if d.is_relative_detector_id()]\n",
                     "lineno": 150,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3686,13 +3686,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "        continue\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "    )\n",
                     "lineno": 151,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3710,13 +3710,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "    defects = tuple(\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "    prob_stim = instr.args_copy()[0]\n",
                     "lineno": 152,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3734,13 +3734,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "        [d.val for d in instr.targets_copy() if d.is_relative_detector_id()]\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "    prob_estimated = edge_probs[defects]\n",
                     "lineno": 153,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3758,13 +3758,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "    )\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "\n",
                     "lineno": 154,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3782,13 +3782,13 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 },
                 {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "    prob_stim = instr.args_copy()[0]\n",
+                    "end_outermost_loop": 155,
+                    "end_region_line": 155,
+                    "line": "    assert pytest.approx(prob_stim, abs=2e-2) == prob_estimated\n",
                     "lineno": 155,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3806,156 +3806,84 @@
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
-                },
-                {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "    prob_estimated = edge_probs[defects]\n",
-                    "lineno": 156,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
-                    "n_gpu_avg_memory_mb": 0.0,
-                    "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
-                },
-                {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "\n",
-                    "lineno": 157,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
-                    "n_gpu_avg_memory_mb": 0.0,
-                    "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
-                },
-                {
-                    "end_outermost_loop": 158,
-                    "end_region_line": 158,
-                    "line": "    assert pytest.approx(prob_stim, abs=2e-2) == prob_estimated\n",
-                    "lineno": 158,
-                    "memory_samples": [],
-                    "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
-                    "n_core_utilization": 0.0,
-                    "n_cpu_percent_c": 0.0,
-                    "n_cpu_percent_python": 0.0,
-                    "n_gpu_avg_memory_mb": 0.0,
-                    "n_gpu_peak_memory_mb": 0.0,
-                    "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
-                    "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
-                    "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 149,
-                    "start_region_line": 149
+                    "start_outermost_loop": 146,
+                    "start_region_line": 146
                 }
             ],
             "percent_cpu_time": 100.0
         }
     },
     "gpu": false,
-    "growth_rate": 46.55328106694775,
-    "max_footprint_fname": "/home/marc/usuari/phd/repositories/dem_estimation/benchmarks/benchmark.py",
-    "max_footprint_lineno": 142,
-    "max_footprint_mb": 86.39560890197754,
+    "growth_rate": 40.73260013894879,
+    "max_footprint_fname": "/home/marc/usuari/phd/repositories/dem_estimation/benchmarks/run_time.py",
+    "max_footprint_lineno": 139,
+    "max_footprint_mb": 105.5639762878418,
     "memory": true,
-    "program": "/home/marc/usuari/phd/repositories/dem_estimation/benchmarks/benchmark.py",
+    "program": "/home/marc/usuari/phd/repositories/dem_estimation/benchmarks/run_time.py",
     "samples": [
         [
-            198169064,
-            10.0000581741333
+            418026307,
+            10.001303672790527
         ],
         [
-            198171718,
-            10.094301223754883
+            418030141,
+            10.09554672241211
         ],
         [
-            198172734,
-            10.188544273376465
+            418031667,
+            10.189789772033691
         ],
         [
-            988234676,
-            26.778767585754395
+            2479292810,
+            26.824337005615234
         ],
         [
-            988237219,
-            42.28271961212158
+            2479297098,
+            42.32828903198242
         ],
         [
-            988238399,
-            57.607869148254395
+            2479299250,
+            57.653438568115234
         ],
         [
-            988239353,
-            86.22500324249268
+            2479300641,
+            105.34088516235352
         ],
         [
-            988240340,
-            86.31924629211426
+            2479301980,
+            105.4351282119751
         ],
         [
-            2621247502,
-            70.87391376495361
+            4659900094,
+            90.04231929779053
         ],
         [
-            2621251366,
-            55.54869556427002
+            4659903855,
+            74.71710109710693
         ],
         [
-            2621252587,
-            40.223477363586426
+            4659905641,
+            59.39188289642334
         ],
         [
-            2621253634,
-            55.47998523712158
+            4659906834,
+            74.64835262298584
         ],
         [
-            2621254357,
-            71.03967761993408
+            4659907795,
+            90.20804500579834
         ],
         [
-            2621255205,
-            86.30136585235596
+            4659909304,
+            105.46973323822021
         ],
         [
-            2623421827,
-            86.39560890197754
+            4665061204,
+            105.5639762878418
         ],
         [
-            2623425023,
-            61.50359058380127
+            4665066718,
+            61.60001277923584
         ]
     ],
     "stacks": []

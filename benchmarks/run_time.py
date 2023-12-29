@@ -71,29 +71,26 @@ def get_edge_probabilities(
         for e1, e2 in edges:
             neighbors[e1].append(e2)
             neighbors[e2].append(e1)
-        neighbors = {d: np.array(n) for d, n in neighbors.items()}
-
-    # obtain <didj> and <di>
-    didj = np.einsum("ni, nj -> ij", defects, defects, dtype=np.int32) / n_shots
-    di = np.average(defects, axis=0)
-    di_matrix = np.repeat(di[np.newaxis, :], len(di), axis=0)
+    neighbors = {d: np.array(n) for d, n in neighbors.items()}
 
     # get edges using Eq. 11 from the reference above
-    numerator = 4 * (didj - di_matrix * di_matrix.T)
-    denominator = 1 - 2 * di_matrix - 2 * di_matrix.T + 4 * didj
-    tmp = 1 - numerator / denominator
+    di = np.average(defects, axis=0)
+    for e1, e2 in edges:
+        xi, xj = defects[:, e1], defects[:, e2]
+        xixj = np.einsum("i,i -> ", xi, xj, dtype=np.int32) / n_shots
+        numerator = 4 * (xixj - di[e1] * di[e2])
+        denominator = 1 - 2 * di[e1] - 2 * di[e2] + 4 * xixj
+        tmp = 1 - numerator / denominator
 
-    if avoid_nans:
-        tmp[tmp < 0] = 0
+        if avoid_nans:
+            tmp = 0 if tmp < 0 else tmp
 
-    pij = 0.5 - 0.5 * np.sqrt(tmp)
-
-    for edge in edges:
-        edge_probs[tuple(edge)] = pij[edge[0], edge[1]]
+        edge_probs[tuple(sorted((e1, e2)))] = 0.5 - 0.5 * np.sqrt(tmp)
 
     # get boundary edges using Eq. 16 from the reference above
+    di = np.average(defects, axis=0)
     for d in boundary_edges:
-        probs = pij[neighbors[d], d]
+        probs = [edge_probs[tuple(sorted((e1, d)))] for e1 in neighbors[d]]
         p_sigma = add_probs(probs)
         edge_probs[(d,)] = (di[d] - p_sigma) / (1 - 2 * p_sigma)
 
@@ -116,7 +113,7 @@ def g(p: np.ndarray, q: np.ndarray) -> np.ndarray:
 
 circuit = stim.Circuit.generated(
     code_task="repetition_code:memory",
-    rounds=10,
+    rounds=20,
     distance=5,
     after_clifford_depolarization=0.1,
     before_measure_flip_probability=0.1,

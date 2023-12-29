@@ -64,18 +64,26 @@ def get_edge_probabilities(
         for e1, e2 in edges:
             neighbors[e1].append(e2)
             neighbors[e2].append(e1)
-        neighbors = {d: np.array(n) for d, n in neighbors.items()}
+    neighbors = {d: np.array(n) for d, n in neighbors.items()}
 
-    # get edge probabilities
-    pij = get_pij_matrix(defects, avoid_nans=avoid_nans)
+    # get edges using Eq. 11 from the reference above
+    di = np.average(defects, axis=0)
+    for e1, e2 in edges:
+        xi, xj = defects[:, e1], defects[:, e2]
+        xixj = np.einsum("i,i -> ", xi, xj, dtype=np.int32) / n_shots
+        numerator = 4 * (xixj - di[e1] * di[e2])
+        denominator = 1 - 2 * di[e1] - 2 * di[e2] + 4 * xixj
+        tmp = 1 - numerator / denominator
 
-    for edge in edges:
-        edge_probs[tuple(edge)] = pij[edge[0], edge[1]]
+        if avoid_nans:
+            tmp = 0 if tmp < 0 else tmp
+
+        edge_probs[tuple(sorted((e1, e2)))] = 0.5 - 0.5 * np.sqrt(tmp)
 
     # get boundary edges using Eq. 16 from the reference above
     di = np.average(defects, axis=0)
     for d in boundary_edges:
-        probs = pij[neighbors[d], d]
+        probs = [edge_probs[tuple(sorted((e1, d)))] for e1 in neighbors[d]]
         p_sigma = add_probs(probs)
         edge_probs[(d,)] = (di[d] - p_sigma) / (1 - 2 * p_sigma)
 

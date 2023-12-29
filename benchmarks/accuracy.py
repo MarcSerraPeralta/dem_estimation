@@ -7,11 +7,11 @@ from dem_estimation import stim_to_edges, get_edge_probabilities
 
 circuit = stim.Circuit.generated(
     code_task="repetition_code:memory",
-    rounds=10,
+    rounds=60,
     distance=5,
-    after_clifford_depolarization=0.1,
-    before_measure_flip_probability=0.1,
-    after_reset_flip_probability=0.1,
+    after_clifford_depolarization=0.02,
+    before_measure_flip_probability=0.05,
+    after_reset_flip_probability=0.01,
 )
 sampler = circuit.compile_detector_sampler()
 defects = sampler.sample(shots=1_000_000)
