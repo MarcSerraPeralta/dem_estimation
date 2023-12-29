@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Tuple
 from itertools import combinations
 
 import numpy as np
@@ -78,15 +78,22 @@ def get_edge_probabilities(
         if avoid_nans:
             tmp = 0 if tmp < 0 else tmp
 
-        edge_probs[tuple(sorted((e1, e2)))] = 0.5 - 0.5 * np.sqrt(tmp)
+        edge_probs[e_pair(e1, e2)] = 0.5 - 0.5 * np.sqrt(tmp)
 
     # get boundary edges using Eq. 16 from the reference above
     for d in boundary_edges:
-        probs = [edge_probs[tuple(sorted((e1, d)))] for e1 in neighbors[d]]
+        probs = [edge_probs[e_pair(e1, d)] for e1 in neighbors[d]]
         p_sigma = add_probs(probs)
         edge_probs[(d,)] = (di[d] - p_sigma) / (1 - 2 * p_sigma)
 
     return edge_probs
+
+
+def e_pair(e1: int, e2: int) -> Tuple:
+    """
+    Returns a standarized edge pair (e1, e2)
+    """
+    return tuple(sorted((e1, e2)))
 
 
 def get_pij_matrix(defects: np.ndarray, avoid_nans: bool = True) -> np.ndarray:
