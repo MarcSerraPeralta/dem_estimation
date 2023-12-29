@@ -38,9 +38,9 @@ def get_edge_probabilities(
         Dictionary containing the edges and their estimated probabilities.
     """
     # checks
-    if (not isinstance(edges, list)) or (edges is not None):
+    if (not isinstance(edges, list)) and (edges is not None):
         raise ValueError(f"'edges' must be a list or None, but {type(edges)} was given")
-    if (not isinstance(boundary_edges, list)) or (boundary_edges is not None):
+    if (not isinstance(boundary_edges, list)) and (boundary_edges is not None):
         raise ValueError(
             f"'boundary_edges' must be a list or None, but {type(boundary_edges)} was given"
         )
@@ -69,7 +69,7 @@ def get_edge_probabilities(
     # obtain <didj> and <di>
     cross_corr_mat = np.einsum("ni, nj -> nij", defects, defects)
     didj = np.average(cross_corr_mat, axis=0)
-    di = np.average(defects_np, axis=0)
+    di = np.average(defects, axis=0)
     di_matrix = np.repeat(di[np.newaxis, :], len(di), axis=0)
 
     # get edges using Eq. 11 from the reference above
@@ -83,7 +83,7 @@ def get_edge_probabilities(
     pij = 0.5 - 0.5 * np.sqrt(1 - fraction)
 
     for edge in edges:
-        edge_probs[edge] = pij[edge[0], edge[1]]
+        edge_probs[tuple(edge)] = pij[edge[0], edge[1]]
 
     # get boundary edges using Eq. 16 from the reference above
     for d in boundary_edges:
