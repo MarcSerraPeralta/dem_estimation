@@ -35,6 +35,3 @@ def test_get_edge_probabilities():
         assert pytest.approx(prob_stim, abs=2e-2) == prob_estimated
 
     return
-
-
-# create dem from stim, sample defects from stim and then compare the DEMs.
