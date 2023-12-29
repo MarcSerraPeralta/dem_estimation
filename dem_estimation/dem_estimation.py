@@ -82,17 +82,6 @@ def get_edge_probabilities(
     return edge_probs
 
 
-def add_probs(probs: list) -> float:
-    prob = probs[0]
-    for p in probs[1:]:
-        prob = g(prob, p)
-    return prob
-
-
-def g(p: np.ndarray, q: np.ndarray) -> np.ndarray:
-    return p * (1 - q) + (1 - p) * q
-
-
 def get_pij_matrix(defects: np.ndarray, avoid_nans: bool = True) -> np.ndarray:
     """
     Calculates the Pij matrix.
@@ -131,3 +120,46 @@ def get_pij_matrix(defects: np.ndarray, avoid_nans: bool = True) -> np.ndarray:
     pij = 0.5 - 0.5 * np.sqrt(tmp)
 
     return pij
+
+
+def add_probs(probs: list) -> float:
+    """
+    Returns the joined probability that an odd number
+    of independent mechanisms are triggered.
+
+    Parameters
+    ----------
+    probs
+        Probabilities of the independent mechanisms
+
+    Returns
+    -------
+    prob
+        Joined probability that an odd number
+        of independent mechanisms are triggered
+    """
+    prob = probs[0]
+    for p in probs[1:]:
+        prob = g(prob, p)
+
+    return prob
+
+
+def g(p: float, q: float) -> float:
+    """
+    Returns the joined probability that only one
+    indepedent mechanism is triggered from a set of two.
+
+    Parameters
+    ----------
+    p
+        Probability for the first mechanism
+    q
+        Probability for the second mechanism
+
+    Returns
+    -------
+    Joined probability that only one indepedent mechanism is
+    triggered from a set of two
+    """
+    return p * (1 - q) + (1 - p) * q
