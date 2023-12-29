@@ -1,7 +1,7 @@
 import pytest
 import stim
 
-from dem_estimation import get_edge_probabilities, stim_to_edges, edges_to_stim
+from dem_estimation import get_edge_probabilities, stim_to_edges
 
 
 def test_get_edge_probabilities():
