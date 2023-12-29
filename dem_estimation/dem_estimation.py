@@ -66,25 +66,14 @@ def get_edge_probabilities(
             neighbors[e2].append(e1)
         neighbors = {d: np.array(n) for d, n in neighbors.items()}
 
-    # obtain <didj> and <di>
-    didj = np.einsum("ni, nj -> ij", defects, defects, dtype=np.int32) / n_shots
-    di = np.average(defects, axis=0)
-    di_matrix = np.repeat(di[np.newaxis, :], len(di), axis=0)
-
-    # get edges using Eq. 11 from the reference above
-    numerator = 4 * (didj - di_matrix * di_matrix.T)
-    denominator = 1 - 2 * di_matrix - 2 * di_matrix.T + 4 * didj
-    tmp = 1 - numerator / denominator
-
-    if avoid_nans:
-        tmp[tmp < 0] = 0
-
-    pij = 0.5 - 0.5 * np.sqrt(tmp)
+    # get edge probabilities
+    pij = get_pij_matrix(defects, avoid_nans=avoid_nans)
 
     for edge in edges:
         edge_probs[tuple(edge)] = pij[edge[0], edge[1]]
 
     # get boundary edges using Eq. 16 from the reference above
+    di = np.average(defects, axis=0)
     for d in boundary_edges:
         probs = pij[neighbors[d], d]
         p_sigma = add_probs(probs)
@@ -102,3 +91,43 @@ def add_probs(probs: list) -> float:
 
 def g(p: np.ndarray, q: np.ndarray) -> np.ndarray:
     return p * (1 - q) + (1 - p) * q
+
+
+def get_pij_matrix(defects: np.ndarray, avoid_nans: bool = True) -> np.ndarray:
+    """
+    Calculates the Pij matrix.
+
+    For the theory behind this formulat see Eqns. 11 from the article
+    "Exponential suppression of bit or phase errors with cyclic error correction" by Google Quantum AI,
+    found in the Supplementary information, accessible from https://doi.org/10.1038/s41586-021-03588-y.
+
+    Parameters
+    ----------
+    defects
+        Defect observations with shape (n_shots, n_defects)
+    avoid_nans
+        If True, ensures that the values inside square roots are positive.
+
+    Returns
+    -------
+    pij
+        Dictionary containing the edges and their estimated probabilities.
+    """
+    n_shots, n_defects = defects.shape
+
+    # obtain <didj> and <di>
+    didj = np.einsum("ni, nj -> ij", defects, defects, dtype=np.int32) / n_shots
+    di = np.average(defects, axis=0)
+    di_matrix = np.repeat(di[np.newaxis, :], len(di), axis=0)
+
+    # get edges using Eq. 11 from the reference above
+    numerator = 4 * (didj - di_matrix * di_matrix.T)
+    denominator = 1 - 2 * di_matrix - 2 * di_matrix.T + 4 * didj
+    tmp = 1 - numerator / denominator
+
+    if avoid_nans:
+        tmp[tmp < 0] = 0
+
+    pij = 0.5 - 0.5 * np.sqrt(tmp)
+
+    return pij
