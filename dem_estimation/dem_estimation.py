@@ -81,7 +81,6 @@ def get_edge_probabilities(
         edge_probs[tuple(sorted((e1, e2)))] = 0.5 - 0.5 * np.sqrt(tmp)
 
     # get boundary edges using Eq. 16 from the reference above
-    di = np.average(defects, axis=0)
     for d in boundary_edges:
         probs = [edge_probs[tuple(sorted((e1, d)))] for e1 in neighbors[d]]
         p_sigma = add_probs(probs)
