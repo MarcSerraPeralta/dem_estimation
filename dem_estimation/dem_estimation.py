@@ -96,46 +96,6 @@ def e_pair(e1: int, e2: int) -> Tuple:
     return tuple(sorted((e1, e2)))
 
 
-def get_pij_matrix(defects: np.ndarray, avoid_nans: bool = True) -> np.ndarray:
-    """
-    Calculates the Pij matrix.
-
-    For the theory behind this formulat see Eqns. 11 from the article
-    "Exponential suppression of bit or phase errors with cyclic error correction" by Google Quantum AI,
-    found in the Supplementary information, accessible from https://doi.org/10.1038/s41586-021-03588-y.
-
-    Parameters
-    ----------
-    defects
-        Defect observations with shape (n_shots, n_defects)
-    avoid_nans
-        If True, ensures that the values inside square roots are positive.
-
-    Returns
-    -------
-    pij
-        Dictionary containing the edges and their estimated probabilities.
-    """
-    n_shots, n_defects = defects.shape
-
-    # obtain <didj> and <di>
-    didj = np.einsum("ni, nj -> ij", defects, defects, dtype=np.int32) / n_shots
-    di = np.average(defects, axis=0)
-    di_matrix = np.repeat(di[np.newaxis, :], len(di), axis=0)
-
-    # get edges using Eq. 11 from the reference above
-    numerator = 4 * (didj - di_matrix * di_matrix.T)
-    denominator = 1 - 2 * di_matrix - 2 * di_matrix.T + 4 * didj
-    tmp = 1 - numerator / denominator
-
-    if avoid_nans:
-        tmp[tmp < 0] = 0
-
-    pij = 0.5 - 0.5 * np.sqrt(tmp)
-
-    return pij
-
-
 def add_probs(probs: list) -> float:
     """
     Returns the joined probability that an odd number
