@@ -64,7 +64,6 @@ def get_edge_probabilities(
         for e1, e2 in edges:
             neighbors[e1].append(e2)
             neighbors[e2].append(e1)
-    neighbors = {d: np.array(n) for d, n in neighbors.items()}
 
     # get edges using Eq. 11 from the reference above
     di = np.average(defects, axis=0)
@@ -82,9 +81,9 @@ def get_edge_probabilities(
 
     # get boundary edges using Eq. 16 from the reference above
     for d in boundary_edges:
-        probs = [edge_probs[e_pair(e1, d)] for e1 in neighbors[d]]
+        probs = [edge_probs[e_pair(e1, d[0])] for e1 in neighbors[d[0]]]
         p_sigma = add_probs(probs)
-        edge_probs[(d,)] = (di[d] - p_sigma) / (1 - 2 * p_sigma)
+        edge_probs[d] = (di[d[0]] - p_sigma) / (1 - 2 * p_sigma)
 
     return edge_probs
 

@@ -20,7 +20,7 @@ def test_get_edge_probabilities():
     edges, boundary_edges, _ = stim_to_edges(dem)
 
     edge_probs = get_edge_probabilities(
-        defects, edges=edges, boundary_edges=boundary_edges
+        defects, edges=list(edges.keys()), boundary_edges=list(boundary_edges.keys())
     )
 
     for instr in dem.flattened():

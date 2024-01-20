@@ -17,6 +17,8 @@ license = {file = "LICENSE"}
 readme = "README.md"
 dependencies = [
     "numpy",
+    "networkx"
+    #"cython", # must be included for compiling in cython
 ]
 keywords = ["dem", "weight", "estimation", "decoder", "decoding graph"]
 

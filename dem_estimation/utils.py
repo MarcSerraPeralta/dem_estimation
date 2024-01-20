@@ -1,10 +1,13 @@
 from typing import Dict, Tuple, List
 
+from itertools import chain
+
 import numpy as np
 import stim
+import networkx as nx
 
 
-def stim_to_edges(dem: stim.DetectorErrorModel) -> Tuple[List, List, Dict]:
+def stim_to_edges(dem: stim.DetectorErrorModel) -> Tuple[Dict, Dict, Dict]:
     """
     Returns the edges, boundary edges and the logical effect of them from a
     stim detector error model.
@@ -23,23 +26,26 @@ def stim_to_edges(dem: stim.DetectorErrorModel) -> Tuple[List, List, Dict]:
     edge_logicals
         Dictionary with the edges (keys) and logical flips (values)
     """
-    edges = []
-    boundary_edges = []
+    edges = {}
+    boundary_edges = {}
     edge_logicals = {}
 
     for instr in dem.flattened():
         if instr.type != "error":
             continue
 
-        defects = [d.val for d in instr.targets_copy() if d.is_relative_detector_id()]
+        prob = instr.args_copy()[0]
+        defects = tuple(
+            [d.val for d in instr.targets_copy() if d.is_relative_detector_id()]
+        )
         logicals = [d.val for d in instr.targets_copy() if d.is_logical_observable_id()]
 
         if len(defects) == 1:
-            boundary_edges.append(defects[0])
+            boundary_edges[defects] = prob
         else:
-            edges.append(defects)
+            edges[defects] = prob
 
-        edge_logicals[tuple(defects)] = logicals
+        edge_logicals[defects] = logicals
 
     return edges, boundary_edges, edge_logicals
 
@@ -72,6 +78,83 @@ def edges_to_stim(edge_probs: Dict, edge_logicals: Dict) -> stim.DetectorErrorMo
         dem.append("error", prob, defects + logicals)
 
     return dem
+
+
+def stim_to_nx(dem: stim.DetectorErrorModel) -> nx.Graph:
+    shift_coords = 0
+    edges = {}  # detectors : {"prob": prob, "log": logicals_flipped}
+    nodes = {}  # detector : coords
+
+    # prepare data from dem
+    for instr in dem.flattened():
+        if instr.type == "error":
+            detectors = tuple(
+                [d.val for d in instr.targets_copy() if d.is_relative_detector_id()]
+            )
+            if len(detectors) > 2:
+                raise ValueError(
+                    "DEM must have only edges (not hyperedges), "
+                    f"but hyperedge {instr} found."
+                )
+
+            logicals = [
+                d.val for d in instr.targets_copy() if d.is_logical_observable_id()
+            ]
+            prob = instr.args_copy()[0]
+            edges[detectors] = dict(prob=prob, log=logicals)
+        elif instr.type == "shift_coords":
+            shift_coords += instr.targets_copy()
+        elif instr.type == "detector":
+            coords = np.array(instr.args_copy()) + shift_coords
+            detector = instr.targets_copy()[0].val
+            nodes[detector] = coords
+
+    # check for undefined nodes and
+    # if all of them have coordinates
+    nodes_in_edges = set(chain.from_iterable(edges.keys()))
+    print(nodes)
+    print(nodes_in_edges)
+    for node in nodes_in_edges:
+        if (node not in nodes) or (len(nodes[node]) == 0):
+            raise ValueError(
+                f"All nodes must have coordinates, but {node} does not have them"
+            )
+
+    # create graph
+    graph = nx.Graph()
+    for node, coords in nodes.items():
+        graph.add_node(node, coords=coords)
+    graph.add_node("boundary")
+    for nodes, attrs in edges.items():
+        if len(nodes) == 1:
+            graph.add_edge(nodes[0], "boundary", **attrs)
+        else:
+            graph.add_edge(*nodes, **attrs)
+
+    return graph
+
+
+def floor_boundary_edges(
+    dem: Dict[Tuple, float], boundary_edges: Dict[Tuple, float]
+) -> Dict[Tuple, float]:
+    floored_dem = {}
+    for edge, prob in dem.items():
+        if len(edge) != 1:
+            floored_dem[edge] = prob
+            continue
+
+        # ensure that all the boundary edges in 'dem'
+        # specified in 'boundary_edges'
+        if prob < boundary_edges[edge]:
+            floored_dem[edge] = boundary_edges[edge]
+        else:
+            floored_dem[edge] = prob
+
+    return floored_dem
+
+
+def clip_negative_edges(dem: Dict[Tuple, float]) -> Dict[Tuple, float]:
+    return {e: p if p > 0 else 0 for e, p in dem.items()}
 
 
 def get_pij_matrix(defects: np.ndarray, avoid_nans: bool = True) -> np.ndarray:
