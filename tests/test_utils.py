@@ -14,5 +14,4 @@ def test_dem_to_nx():
     )
     dem = circuit.detector_error_model()
     graph = stim_to_nx(dem)
-    print(graph)
     return

@@ -112,8 +112,6 @@ def stim_to_nx(dem: stim.DetectorErrorModel) -> nx.Graph:
     # check for undefined nodes and
     # if all of them have coordinates
     nodes_in_edges = set(chain.from_iterable(edges.keys()))
-    print(nodes)
-    print(nodes_in_edges)
     for node in nodes_in_edges:
         if (node not in nodes) or (len(nodes[node]) == 0):
             raise ValueError(
