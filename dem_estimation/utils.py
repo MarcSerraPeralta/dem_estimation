@@ -7,7 +7,9 @@ import stim
 import networkx as nx
 
 
-def stim_to_edges(dem: stim.DetectorErrorModel) -> Tuple[Dict, Dict, Dict]:
+def stim_to_edges(
+    dem: stim.DetectorErrorModel, return_coords: bool = False
+) -> Tuple[Dict, Dict, Dict]:
     """
     Returns the edges, boundary edges and the logical effect of them from a
     stim detector error model.
@@ -16,6 +18,8 @@ def stim_to_edges(dem: stim.DetectorErrorModel) -> Tuple[Dict, Dict, Dict]:
     ----------
     dem
         Detector error model in stim format.
+    return_coords
+        If True, returns the a 'detector_coords'
 
     Returns
     -------
@@ -25,32 +29,47 @@ def stim_to_edges(dem: stim.DetectorErrorModel) -> Tuple[Dict, Dict, Dict]:
         List of boundary edges present in dem
     edge_logicals
         Dictionary with the edges (keys) and logical flips (values)
+    detector_coords
+        Dictionary containing the detectors (key) and their coordinates (values)
     """
     edges = {}
     boundary_edges = {}
     edge_logicals = {}
+    detector_coords = {}
+    shift_coords = 0
 
     for instr in dem.flattened():
-        if instr.type != "error":
-            continue
+        if instr.type == "error":
+            prob = instr.args_copy()[0]
+            defects = tuple(
+                [d.val for d in instr.targets_copy() if d.is_relative_detector_id()]
+            )
+            logicals = [
+                d.val for d in instr.targets_copy() if d.is_logical_observable_id()
+            ]
 
-        prob = instr.args_copy()[0]
-        defects = tuple(
-            [d.val for d in instr.targets_copy() if d.is_relative_detector_id()]
-        )
-        logicals = [d.val for d in instr.targets_copy() if d.is_logical_observable_id()]
+            if len(defects) == 1:
+                boundary_edges[defects] = prob
+            else:
+                edges[defects] = prob
 
-        if len(defects) == 1:
-            boundary_edges[defects] = prob
-        else:
-            edges[defects] = prob
+            edge_logicals[defects] = logicals
+        elif instr.type == "detector":
+            detector = instr.targets_copy()[0]
+            coords = np.array(instr.args_copy())
+            detector_coords[detector] = (coords + shift_coords).tolist()
+        elif instr.type == "shift_detectors":
+            shift_coords += np.array(instr.args_copy())
 
-        edge_logicals[defects] = logicals
+    if return_coords:
+        return edges, boundary_edges, edge_logicals, detector_coords
+    else:
+        return edges, boundary_edges, edge_logicals
 
-    return edges, boundary_edges, edge_logicals
 
-
-def edges_to_stim(edge_probs: Dict, edge_logicals: Dict) -> stim.DetectorErrorModel:
+def edges_to_stim(
+    edge_probs: Dict, edge_logicals: Dict, detector_coords: Dict = None
+) -> stim.DetectorErrorModel:
     """
     Returns a decoding graph from the given edge probabilities and logical effects
 
@@ -62,6 +81,8 @@ def edges_to_stim(edge_probs: Dict, edge_logicals: Dict) -> stim.DetectorErrorMo
     edge_logicals
         Dictionary containing the edges (key) and logical flips (values)
         for the given error model
+    detector_coords
+        Dictionary containing the detectors (key) and their coordinates (values)
 
     Returns
     -------
@@ -76,6 +97,11 @@ def edges_to_stim(edge_probs: Dict, edge_logicals: Dict) -> stim.DetectorErrorMo
         ]
         defects = [stim.DemTarget.relative_detector_id(d) for d in edge]
         dem.append("error", prob, defects + logicals)
+
+    # add coordinates
+    if detector_coords is not None:
+        for detector, coords in detector_coords.items():
+            dem.append("detector", targets=[detector], parens_arguments=coords)
 
     return dem
 
