@@ -6,6 +6,8 @@ import numpy as np
 import stim
 import networkx as nx
 
+from .dem_estimation import g as g_funct
+
 
 def stim_to_edges(
     dem: stim.DetectorErrorModel, return_coords: bool = False
@@ -49,13 +51,23 @@ def stim_to_edges(
             ]
 
             if len(defects) == 1:
-                boundary_edges[defects] = prob
+                # stim allows for multiple defects having the same effect
+                # why ?
+                if defects not in boundary_edges:
+                    boundary_edges[defects] = prob
+                else:
+                    boundary_edges[defects] = g_funct(boundary_edges[defects], prob)
             else:
-                edges[defects] = prob
+                # stim allows for multiple defects having the same effect
+                # why ?
+                if defects not in edges:
+                    edges[defects] = prob
+                else:
+                    edges[defects] = g_funct(edges[defects], prob)
 
             edge_logicals[defects] = logicals
         elif instr.type == "detector":
-            detector = instr.targets_copy()[0]
+            detector = instr.targets_copy()[0].val
             coords = np.array(instr.args_copy())
             detector_coords[detector] = (coords + shift_coords).tolist()
         elif instr.type == "shift_detectors":
@@ -101,39 +113,27 @@ def edges_to_stim(
     # add coordinates
     if detector_coords is not None:
         for detector, coords in detector_coords.items():
-            dem.append("detector", targets=[detector], parens_arguments=coords)
+            dem.append(
+                "detector",
+                targets=[stim.DemTarget.relative_detector_id(detector)],
+                parens_arguments=coords,
+            )
 
     return dem
 
 
 def stim_to_nx(dem: stim.DetectorErrorModel) -> nx.Graph:
-    shift_coords = 0
     edges = {}  # detectors : {"prob": prob, "log": logicals_flipped}
     nodes = {}  # detector : coords
 
-    # prepare data from dem
-    for instr in dem.flattened():
-        if instr.type == "error":
-            detectors = tuple(
-                [d.val for d in instr.targets_copy() if d.is_relative_detector_id()]
-            )
-            if len(detectors) > 2:
-                raise ValueError(
-                    "DEM must have only edges (not hyperedges), "
-                    f"but hyperedge {instr} found."
-                )
-
-            logicals = [
-                d.val for d in instr.targets_copy() if d.is_logical_observable_id()
-            ]
-            prob = instr.args_copy()[0]
-            edges[detectors] = dict(prob=prob, log=logicals)
-        elif instr.type == "shift_coords":
-            shift_coords += instr.targets_copy()
-        elif instr.type == "detector":
-            coords = np.array(instr.args_copy()) + shift_coords
-            detector = instr.targets_copy()[0].val
-            nodes[detector] = coords
+    bulk_edges, boundary_edges, edge_logicals, detector_coords = stim_to_edges(
+        dem, return_coords=True
+    )
+    nodes = detector_coords
+    for e, prob in bulk_edges.items():
+        edges[e] = {"prob": prob, "log": edge_logicals[e]}
+    for e, prob in boundary_edges.items():
+        edges[e] = {"prob": prob, "log": edge_logicals[e]}
 
     # check for undefined nodes and
     # if all of them have coordinates
