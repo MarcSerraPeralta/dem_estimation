@@ -1,7 +1,10 @@
 from typing import List
 
+from copy import deepcopy
+
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 def plot_pij_matrix(
@@ -16,29 +19,29 @@ def plot_pij_matrix(
     Google Quantum AI. Exponential suppression of bit or phase errors with cyclic
     error correction. Nature 595, 383–387 (2021). https://doi.org/10.1038/s41586-021-03588-y
     """
-    # rotate matrix 270 regrees clock-wise
-    upper_mask = np.rot90(np.triu(np.ones_like(pij)).astype(bool), 3)
-    lower_mask = np.rot90(np.tril(np.ones_like(pij)).astype(bool), 3)
-    pij = np.rot90(deepcopy(pij), 3)
+    # rotate matrix 90 regrees anticlock-wise
+    upper_mask = np.rot90(np.triu(np.ones_like(pij)).astype(bool))
+    lower_mask = np.rot90(np.tril(np.ones_like(pij)).astype(bool))
+    pij = np.rot90(deepcopy(pij))
 
     extent = [0, len(pij), 0, len(pij)]
 
-    # Plot the upper triangle with the 'viridis' colormap
+    # Plot the upper triangle with the 'Blues' colormap
     colorbar_full = ax.imshow(
-        np.ma.array(pij, mask=lower_mask),
-        cmap="Reds",
-        interpolation="none",
+        np.ma.array(pij, mask=lower_mask),  # mask invalidates the given elements
+        cmap="Blues",
+        interpolation="nearest",  # "none" does not work
         vmin=0,
-        vmax=max_prob,
         extent=extent,
     )
 
-    # Plot the lower triangle with the 'hsv' colormap
+    # Plot the lower triangle with the 'Reds' colormap
     colorbar_zoom = ax.imshow(
-        np.ma.array(pij, mask=upper_mask),
-        cmap="Blues",
-        interpolation="none",
+        np.ma.array(pij, mask=upper_mask),  # mask invalidates the given elements
+        cmap="Reds",
+        interpolation="nearest",  # "none" does not work
         vmin=0,
+        vmax=max_prob,
         extent=extent,
     )
 
