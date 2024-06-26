@@ -57,7 +57,7 @@ def get_edge_probabilities(
             neighbors = {d: all_d[all_d != d] for d in range(n_defects)}
 
     if boundary_edges is None:
-        boundary_edges = np.arange(n_defects)
+        boundary_edges = [(d,) for d in range(n_defects)]
 
     if neighbors is None:
         neighbors = {d: [] for d in range(n_defects)}
